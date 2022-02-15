@@ -15,15 +15,20 @@
    
 </head>
 <body>
+
    <div id="navbar">
       <div id="logo">
          <i class='bx bx-menu'></i>
+         <img src="https://cdn.mos.cms.futurecdn.net/8gzcr6RpGStvZFA2qRt4v6-1200-80.jpg
+" alt="Youtube logo">
       </div>
+
       <div id="center">
          <div id="search">
-            <input type="text" placeholder="Search for video">
-            <span onclick=""></span>
-            <i class='bx bx-search-alt-2'></i>
+            <input type="text" id="video" placeholder="Search for video">
+            <span onclick="searchVideos()">
+               <i class='bx bx-search-alt-2'></i>
+            </span>
          </div>
       </div>
    </div>
@@ -34,8 +39,9 @@
       <i class="bx bxs-grid"></i>
       <i class="bx bxs-bell"></i>
       <i class="bx bxs-account"></i>
-      
    </div>
+
+   <div id="videodiv"></div>
    
 </body>
 
