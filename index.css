@@ -61,6 +61,7 @@ body{
     height:  300px;
     margin: 20px;
 }
+
 @media screen and (max-width: 620px) {
    #end i,#logo i{
        display: none;

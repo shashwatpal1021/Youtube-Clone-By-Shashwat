@@ -53,7 +53,7 @@ display();
 
 
 // (2) Search When Something is typed in the search-box
-/*
+
 async function searchVideos(){
     document.getElementById("videodiv").innerHTML=""; // Empty 
 
@@ -73,5 +73,5 @@ div.append(videodiv)
 }
 
 }
-*/
-// AIzaSyDW2AJVOCDsrVUABKqcORlC-3sRCMN0IOY
+
+
