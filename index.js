@@ -75,6 +75,3 @@ div.append(videodiv)
 }
 
 
-
-function myFunction(x) {
-  x.classList.toggle("change")
