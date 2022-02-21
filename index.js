@@ -32,7 +32,7 @@ async function display(){
 
     // q = Popular Videos --> Popular%20Videos (%20 -> Space)
 
-    let res = await fetch(`https://youtube.googleapis.com/youtube/v3/search?q=popular%20videos&key: AIzaSyAO_FJ2SlqU8Q4STEHLGCilw_Y9_11qcW8&maxResults=25`);
+    let res = await fetch(`https://youtube.googleapis.com/youtube/v3/search?q=newtonschool%20video&key=AIzaSyDW2AJVOCDsrVUABKqcORlC-3sRCMN0IOY&maxResults=10`);
 
     let data = await res.json();
     
@@ -53,14 +53,14 @@ display();
 
 
 // (2) Search When Something is typed in the search-box
-
+/*
 async function searchVideos(){
     document.getElementById("videodiv").innerHTML=""; // Empty 
 
     let query = document.getElementById("video").value; // Search String/ Query String
 
 //search for videos
-let res = await fetch(`https://youtube.googleapis.com/youtube/v3/search?q=${query}&type=video&key: AIzaSyAO_FJ2SlqU8Q4STEHLGCilw_Y9_11qcW8&maxResults=25`);
+let res = await fetch(`https://youtube.googleapis.com/youtube/v3/search?q=${query}&type=video&key=AIzaSyDW2AJVOCDsrVUABKqcORlC-3sRCMN0IOY&maxResults=10`);
 let data = await res.json();
 
 for({id:{videoId}}of data.items)
@@ -73,3 +73,5 @@ div.append(videodiv)
 }
 
 }
+*/
+// AIzaSyDW2AJVOCDsrVUABKqcORlC-3sRCMN0IOY
