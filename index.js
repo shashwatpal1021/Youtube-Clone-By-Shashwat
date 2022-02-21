@@ -26,7 +26,7 @@ let div = document.getElementById("videodiv");
 
 // (1) Show/Display Videos on Homepage
 
-
+/*
 
 async function display(){
 
@@ -74,4 +74,7 @@ div.append(videodiv)
 
 }
 
+*/
 
+function myFunction(x) {
+  x.classList.toggle("change")
