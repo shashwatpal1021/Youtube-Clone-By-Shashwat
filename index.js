@@ -1,49 +1,75 @@
 /*
 
-Need 2 things:
+Need 2 Things:
+(1) Show/Display Videos on Homepage
+(2) Search When Something is typed in the search-box
 
-(1) Search When Something is typed in Search box.
-(2) Show/Display Videos on Home page.
-
-   display()
-   - show/display videos on Home page.
-   - Based upon most popular Videos.
-   - Should be called Directly WITHOUT any Event(No Hover,No Click,No on click)
-   - On page load.
-   
-
-
-
-   searchVideo()
-   - Search when something is typed in the search box.
-   - Take the "String" typed in search-box and search on the video.
-*/
-
-let div = document.getElementById("videodiv")
-
-
-// (1)  show/display videos on Homepage
-
-
-async function display() {
-   
-}
 
 display()
+- Show/Display Videos on Homepage
+- Based Upon Most Popular Videos
+- Should be Called Directly WITHOUT Any Event 
+(No Hover, No Click , No On Click)
+- On Page Load
 
 
-//(2) Search when something is typed in the search-box
+
+searchVideo()
+- Search When Something is typed in the search-box
+- Take the "String" typed in search-box and search on that string 
 
 
-async function searchVideos() {
-   document.getElementById("videodiv").innerHTML = "";
+*/
 
-   let video = document.getElementById("video").value;
+let div = document.getElementById("videodiv");
 
-let res = await fetch('')
+
+// (1) Show/Display Videos on Homepage
+
+
+
+async function display(){
+
+    // q = Popular Videos --> Popular%20Videos (%20 -> Space)
+
+    let res = await fetch(`https://youtube.googleapis.com/youtube/v3/search?q=popular%20videos&key: AIzaSyAO_FJ2SlqU8Q4STEHLGCilw_Y9_11qcW8&maxResults=25`);
+
+    let data = await res.json();
+    
+    for({id:{videoId}}of data.items)
+    {
+    let videodiv= document.createElement("iframe")
+    videodiv.setAttribute("class","mons")
+    videodiv.src = `https://www.youtube.com/embed/${videoId}`;
+    videodiv.allow = 'fullscreen'
+    div.append(videodiv)
+    }
+
+}
+
+display();
+
+
+
+
+// (2) Search When Something is typed in the search-box
+
+async function searchVideos(){
+    document.getElementById("videodiv").innerHTML=""; // Empty 
+
+    let query = document.getElementById("video").value; // Search String/ Query String
+
+//search for videos
+let res = await fetch(`https://youtube.googleapis.com/youtube/v3/search?q=${query}&type=video&key: AIzaSyAO_FJ2SlqU8Q4STEHLGCilw_Y9_11qcW8&maxResults=25`);
 let data = await res.json();
 
-   for ({
-   
-})
+for({id:{videoId}}of data.items)
+{
+let videodiv= document.createElement("iframe")
+videodiv.setAttribute("class","mons")
+videodiv.src = `https://www.youtube.com/embed/${videoId}`;
+videodiv.allow = 'fullscreen'
+div.append(videodiv)
+}
+
 }
