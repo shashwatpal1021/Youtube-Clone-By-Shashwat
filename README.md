@@ -1,16 +1,12 @@
 # Youtube-Clone-By-Shashwat
 
 
-# Thyroid-Prediction
-
 ## Table of Content
   * [Link](#link)
   * [Overview](#overview)
-  * [Installation](#installation)
   * [Directory Tree](#directory-tree)
   * [Deployement on Heroku](#deployement-on-heroku)
   * [Technologies used](#technologies-used)
-  * [Future scope of project](#future-scope)
 
 ## Link
 Link: [https://thyroidpredictionsystem.herokuapp.com/](https://thyroidpredictionsystem.herokuapp.com/)
